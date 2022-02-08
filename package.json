@@ -1,24 +1,43 @@
 {
-  "name": "vue3-compoments-webpack",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@luchao/vue3-components",
+  "version": "0.1.10",
+  "private": false,
+  "description": "基于vue3前端组件库",
+  "main": "dist/index.js",
+  "keyword": "vue3 shuhuan",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build1": "vue-cli-service build",
+    "copy": "npx babel src/packages -d dist --copy-files",
+    "babel": "npx babel src/packages -d dist --copy-files && npx sass src/theme-chalk:dist/style --style compressed",
+    "gulp": "gulp -f build/gulpfile.ts"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
+    "core-js": "^3.6.5",
+    "@types/gulp": "^4.0.9",
+    "@types/gulp-autoprefixer": "^0.0.33",
+    "@types/gulp-clean-css": "^4.3.0",
+    "@types/gulp-concat": "^0.0.33",
+    "@types/gulp-sass": "^5.0.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-typescript": "^4.5.15",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
+    "chalk": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-concat": "^2.6.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "ts-node": "^10.5.0",
     "typescript": "~4.1.5"
   }
 }

@@ -1,19 +1,9 @@
-# vue3-compoments-webpack
+# vue3-compoments-webpack 基于vue3前端组件库
 
-## Project setup
-```
-npm install
-```
+## Button
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+```vue
+import SHElement from '@luchao/vue3-components'
 
-### Compiles and minifies for production
+app.use(SHElement, ?option);
 ```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
