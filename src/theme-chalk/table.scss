@@ -1,0 +1,83 @@
+@import 'element-plus/theme-chalk/src/base.scss';
+@import 'element-plus/theme-chalk/src/scrollbar.scss';
+
+
+.sh-table__body-wrapper {
+	position: relative;
+	.hidden-columns {
+		visibility: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+	.sh-table__body {
+		font-size: 14px;
+		background-color: #fff;
+		width: 100%;
+		.el-table__cell {
+			padding: 8px 0;
+			border-bottom: 1px solid rgb(235, 238, 245);
+			background-color: #fff;
+		}
+		thead {
+			color: rgb(144, 147, 153);
+			.cell {
+				text-align: left;
+			}
+			.is-right {
+				.cell { text-align: right; }
+			}
+			.is-center {
+				.cell { text-align: center; }
+			}
+			.is-left {
+				.cell { text-align: left; }
+			}
+		}
+		tbody {
+			color: rgb(96, 98, 102);
+		}
+		.cell {
+			padding: 0 12px;
+		}
+		.is-fixed-left {
+			position: sticky;
+			left: 0;
+			z-index: 1;
+			&.is-scrolling {
+				&:after {
+					content: "";
+					position: absolute;
+					top: 0px;
+					width: 10px;
+					bottom: -1px;
+					overflow-x: hidden;
+					overflow-y: hidden;
+					box-shadow: inset 10px 0 10px -10px #00000026;
+					touch-action: none;
+					pointer-events: none;
+					right: -10px;
+				}
+			}
+		}
+		.is-fixed-right {
+			position: sticky;
+			right: 0;
+			z-index: 1;
+			&.is-scrolling {
+				&:after {
+					content: "";
+					position: absolute;
+					top: 0px;
+					left: -10px;
+					width: 10px;
+					bottom: -1px;
+					overflow-x: hidden;
+					overflow-y: hidden;
+					box-shadow: inset -10px 0 10px -10px #00000026;
+					touch-action: none;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+}

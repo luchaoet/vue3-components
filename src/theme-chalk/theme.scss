@@ -2,7 +2,7 @@
 @use 'mixins/config' as *;
 
 :root {
-    --#{$namespace}-color-white: #{$color-white};
-    --#{$namespace}-color-black: #{$color-black};
-    --#{$namespace}-color-primary: #{$color-primary};
+	--#{$namespace}-color-white: #{$color-white};
+	--#{$namespace}-color-black: #{$color-black};
+	--#{$namespace}-color-primary: #{$color-primary};
 }

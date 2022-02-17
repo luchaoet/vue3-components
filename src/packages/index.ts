@@ -1,21 +1,21 @@
 import { App } from 'vue'
 import ShButton from './button'
 import ShAdvancedInput from './advanced-input'
+import { ShTable, ShTableColumn } from './table'
+import Icon from './icon'
 
-// 所有组件列表
-const components = [ShButton, ShAdvancedInput]
+const components = [ShButton, ShAdvancedInput, ShTable, ShTableColumn, Icon]
 
-// 定义 install 方法， App 作为参数
 const install = (app: App, option: object): void => {
-    // 遍历注册所有组件
     components.map((component) => app.component(component.name, component))
 }
 
+export default { install }
+
 export {
     ShButton,
-    ShAdvancedInput
-}
-
-export default {
-    install
+    ShAdvancedInput,
+    ShTable,
+    ShTableColumn,
+    Icon
 }

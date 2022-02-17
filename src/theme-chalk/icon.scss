@@ -1,0 +1,30 @@
+.sh-icon {
+	font-style: normal;
+	height: 1em;
+	width: 1em;
+	line-height: 1em;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	fill: currentColor;
+	font-size: inherit;
+	svg {
+		width: 1em;
+		height: 1em;
+		vertical-align: -0.15em;
+		fill: currentColor;
+		overflow: hidden;
+	}
+	&.is-loading {
+		animation: rotating 1.5s linear infinite;
+	}
+}
+@keyframes rotating {
+	0% {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
